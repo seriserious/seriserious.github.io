@@ -5,17 +5,15 @@ sidebar:
    enabled: true
 ---
 <div style="
-    float: right; 
-    width: 100px; 
-    height: 100px; 
-    overflow: hidden; 
-    border-radius: 50%; 
-    margin: 0 0 1rem 1rem;">
+    float: left;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 1rem 1rem 0;">
   <img src="/assets/images/me.jpg"
        alt="프로필"
-       style="width: 100%; 
-              height: 100%; 
-              object-fit: cover;" />
+       style="width: 100%; height: 100%; object-fit: cover;" />
 </div>
 
 
