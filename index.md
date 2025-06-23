@@ -1,6 +1,6 @@
 ---
-layout: home
-title: Home
+layout: default
+title: 개인 블로그
 ---
 
 안녕하세요, 소프트웨어를 전공 중인 학부생 박찬우입니다.  
