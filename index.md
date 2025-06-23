@@ -33,4 +33,14 @@ sidebar:
   </div>
 </div>
 
-<!-- Recent Posts 섹션은 그대로 -->
+<!-- Recent Posts 섹션 헤더 -->
+## Recent Posts
+
+<!-- 네비게이션 링크 바 -->
+<nav style="margin: 1.5rem 0; font-weight: bold;">
+  <a href="{{ "/" | relative_url }}">홈</a> |
+  <a href="{{ "/about/" | relative_url }}">소개</a> |
+  <a href="{{ "/projects/" | relative_url }}">프로젝트</a>
+</nav>
+
+<!-- 실제 포스트 리스트는 theme이 자동으로 렌더링합니다 -->
