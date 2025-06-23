@@ -1,16 +1,17 @@
-remote_theme: "mmistakes/minimal-mistakes"  # Remote Theme 사용
-minimal_mistakes_skin: "dirt"
+# 삭제: theme: minimal-mistakes-jekyll
+
+remote_theme: "mmistakes/minimal-mistakes"     # Minimal Mistakes를 원격 테마로 사용
+minimal_mistakes_skin: "dirt"                  # 베이지톤 dirt 스킨 선택
 
 title: "Your Blog Title"
 description: "따뜻한 베이지 톤 블로그"
 
 plugins:
-  - jekyll-include-cache
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
 
 author:
   name: "Your Name"
-  avatar: "/assets/images/avatar.jpg"
+  avatar: "/assets/images/avatar.jpg"          # 업로드한 얼굴 사진 경로
   bio: "여기에 한 줄 소개 입력"
