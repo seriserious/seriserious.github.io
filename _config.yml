@@ -1,17 +1,27 @@
-# 삭제: theme: minimal-mistakes-jekyll
+# 원격 테마 설정 (Minimal Mistakes + dirt 스킨)
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dirt"
 
-remote_theme: "mmistakes/minimal-mistakes"     # Minimal Mistakes를 원격 테마로 사용
-minimal_mistakes_skin: "dirt"                  # 베이지톤 dirt 스킨 선택
-
+# 사이트 기본 메타데이터
 title: "Chanwoo Park"
 description: "따뜻한 베이지 톤 블로그"
 
+# 사용할 Jekyll 플러그인
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-include-cache
 
+# 사이드바에 표시할 author 정보
 author:
-  name: "박찬우"
-  avatar: "/assets/images/me.jpg"          # 업로드한 얼굴 사진 경로
-  bio: "여기에 한 줄 소개 입력"
+  name: "Chanwoo Park"
+  avatar: "/assets/images/me.jpg"
+  bio: "Undergraduate Software Engineering Student"
+
+# (필요시 추가 설정)
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/
