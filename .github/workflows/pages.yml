@@ -5,13 +5,14 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read      # 소스 코드 읽기
+  pages: write        # GitHub Pages 배포 권한
+  id-token: write     # OIDC 토큰 (필요 시)
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -19,7 +20,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.x'
+          ruby-version: '3.2'    # ← 여기를 3.2로 명시합니다
 
       - name: Install dependencies
         run: |
@@ -30,7 +31,6 @@ jobs:
         run: bundle exec jekyll build --destination _site
 
       - name: Upload artifact for Pages
-        # ← 여기만 v1 → v3 로 올립니다.
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
@@ -44,5 +44,4 @@ jobs:
 
     steps:
       - name: Deploy to GitHub Pages
-        # ← 이 부분도 v1 → v4 로 올립니다.
         uses: actions/deploy-pages@v4
