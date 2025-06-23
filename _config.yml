@@ -1,16 +1,12 @@
-remote_theme: "mmistakes/minimal-mistakes"  # Remote Theme 사용
-minimal_mistakes_skin: "dirt"
-
-title: "Your Blog Title"
-description: "따뜻한 베이지 톤 블로그"
-
+remote_theme: "mmistakes/so-simple-theme"
 plugins:
-  - jekyll-include-cache
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
 
+title: "My Beige Blog"
+description: "So Simple Theme with a warm beige feel"
 author:
   name: "Your Name"
   avatar: "/assets/images/avatar.jpg"
-  bio: "여기에 한 줄 소개 입력"
+  bio: "한 줄 소개 입력"
