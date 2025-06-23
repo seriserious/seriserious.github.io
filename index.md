@@ -3,6 +3,9 @@ layout: home
 title: Home
 sidebar:
   enabled: true
+
+show_recent_posts: false
+
 ---
 
 <div style="
