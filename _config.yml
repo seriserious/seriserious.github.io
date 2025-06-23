@@ -3,7 +3,7 @@
 remote_theme: "mmistakes/minimal-mistakes"     # Minimal Mistakes를 원격 테마로 사용
 minimal_mistakes_skin: "dirt"                  # 베이지톤 dirt 스킨 선택
 
-title: "Your Blog Title"
+title: "Chanwoo Park"
 description: "따뜻한 베이지 톤 블로그"
 
 plugins:
@@ -12,6 +12,6 @@ plugins:
   - jekyll-seo-tag
 
 author:
-  name: "Your Name"
-  avatar: "/assets/images/avatar.jpg"          # 업로드한 얼굴 사진 경로
+  name: "박찬우"
+  avatar: "/assets/images/me.jpg"          # 업로드한 얼굴 사진 경로
   bio: "여기에 한 줄 소개 입력"
