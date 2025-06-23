@@ -1,34 +1,51 @@
+# .github/workflows/pages.yml
 name: Build and Deploy Jekyll site
 
+# main 브랜치에 푸시할 때마다 실행
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+
+# Pages에 쓰려면 최소한 이 권한들이 필요합니다
+permissions:
+  contents: read            # 소스 코드 읽기
+  pages: write              # Pages 환경에 기록
+  id-token: write           # OIDC 토큰 (선택)
 
 jobs:
-  build-and-deploy:
+  # 1) 빌드만 담당하는 잡
+  build:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build --destination _site
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: _site
+
+  # 2) 실제 배포 담당 잡 (build가 성공해야 실행)
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages         # 이 환경 이름이 중요합니다!
+      url: https://seriserious.github.io
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.x'
-
-    - name: Install dependencies
-      run: |
-        gem install bundler
-        bundle install
-
-    - name: Build site with Jekyll
-      run: bundle exec jekyll build --destination _site
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
-        publish_dir: ./_site
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
