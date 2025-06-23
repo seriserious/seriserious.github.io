@@ -12,7 +12,7 @@ sidebar:
          height: 100px;
          object-fit: cover;
          border-radius: 50%;
-         margin-left: -80px;  /* ← 여기 값을 더 크게(음수) 해 보세요 */
+         margin-left: -150px;  /* ← 여기 값을 더 크게(음수) 해 보세요 */
          margin-right: 1rem;
        " />
 
