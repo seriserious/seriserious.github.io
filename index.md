@@ -4,6 +4,9 @@ title: Home
 sidebar:
    enabled: true
 ---
+<div align="right">
+  <img src="/assets/images/me.jpg" alt="프로필" style="border-radius:50%; width:100px;"/>
+</div>
 
 안녕하세요, 소프트웨어를 전공 중인 학부생 박찬우입니다.  
 데이터 분석, 특히 금융 데이터 분석에 관심이 있습니다.
