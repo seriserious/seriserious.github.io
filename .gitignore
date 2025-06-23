@@ -4,3 +4,7 @@ _site/
 .jekyll-metadata/
 vendor/
 # Gemfile.lock
+
+# Jekyll build outputs
+_site/
+.jekyll-cache/
