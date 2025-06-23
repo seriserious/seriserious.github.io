@@ -1,6 +1,12 @@
-remote_theme: "daattali/beautiful-jekyll"
+remote_theme: "mmistakes/so-simple-theme"
 plugins:
   - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
 
-title: "My Beautiful Beige Site"
-description: "Beautiful Jekyll Theme with a soft beige header"
+title: "My Beige Blog"
+description: "So Simple Theme with a warm beige feel"
+author:
+  name: "Your Name"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "한 줄 소개 입력"
