@@ -40,7 +40,9 @@ sidebar:
 <nav style="margin: 1.5rem 0; font-weight: bold;">
   <a href="{{ "/" | relative_url }}">홈</a> |
   <a href="{{ "/about/" | relative_url }}">소개</a> |
-  <a href="{{ "/projects/" | relative_url }}">프로젝트</a>
+  <a href="{{ "/projects/" | relative_url }}">프로젝트</a> |
+  <a href="{{ "/trading-log/" | relative_url }}">매매일지</a>
 </nav>
+
 
 <!-- 실제 포스트 리스트는 theme이 자동으로 렌더링합니다 -->
